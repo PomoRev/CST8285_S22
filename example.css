@@ -1,0 +1,36 @@
+/* 
+    Generic CSS file for initial HTML example
+    Frank Emanuel, Ph.D. 
+*/
+
+* {
+
+    --pageBack: rgb(14, 14, 14);
+    --textBody: rgb(241, 241, 241);
+    --textHeader: rgb(248, 249, 188);
+
+}
+
+body {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+                 'Lucida Grande', 'Lucida Sans Unicode', 
+                 Geneva, Verdana, sans-serif;
+    background-color: var(--pageBack);
+
+}
+
+header {
+
+    font-size: 1em;
+    color: var(--textHeader);
+    text-align: center;
+
+}
+
+.bodytext {
+
+    color: var(--textBody);
+    font-size: .8em;
+
+}
