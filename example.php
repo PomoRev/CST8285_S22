@@ -1,3 +1,5 @@
+<!-- Example file with inline PHP code, will only run from back end. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
