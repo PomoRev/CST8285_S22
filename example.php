@@ -14,6 +14,11 @@
 </head>
 <body>
     <header>HTML 5.0 Compliant Web Document</header>
+
+    <!-- Note that PHP is run on the backend and requires a live web server like Apache. All 
+    PHP that runs will be removed from the webpage returned to the front end (browser) from
+    the web server.  -->
+
     <p class="bodytext"><?php echo "Hello World from PHP!"; ?></p>
     <button onclick="helloWorld()">Click to have JS say hello</button>
 </body>
