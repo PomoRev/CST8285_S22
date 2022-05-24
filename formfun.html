@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prof. Frank Emanuel">
+    <meta name="email" content="emanuef@algonquincollege.com">
+    <meta name="date" content="2022-05-24">
+    <title>Fun with Forms in HTML</title>
+
+    <script>
+        
+        function validate() {
+
+            let returnValue = true;
+
+            if (someValue.value == "Frank"){
+
+                returnValue = false;
+                someValue.value = "";
+            }
+
+            return returnValue;    
+
+        }
+
+    </script>
+</head>
+<body>
+    <header>Fun with Forms in HTML</header>
+
+    front-end validation: HTML, JavaScript
+
+    <form action="" onsubmit="return validate()" method="get">
+
+        <fieldset>
+            <legend>The topmost Form!!!!</legend>
+            <input type="text" name="someValue" id="someValue">
+        </fieldset>
+
+        <button type="submit">Press Me</button>
+
+    </form>
+
+    <form action="" method="get">
+
+        <input type="text" name="otherValue">
+
+        <button type="submit">No Press Me</button>
+    </form>
+    
+
+</body>
+</html>
