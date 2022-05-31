@@ -12,12 +12,16 @@
         
         function validate() {
 
+            // This form expects a value in somevalue (id)
+            // compare somevalue with the value 'Frank' and 'frank'
+            // returns true if the comparison fails
+
             let returnValue = true;
 
-            if (someValue.value == "Frank"){
+            if (someValue.value == "Frank" || someValue.value == "frank"){
 
                 returnValue = false;
-                someValue.value = "";
+                someValue.value = "Gary";
             }
 
             return returnValue;    
