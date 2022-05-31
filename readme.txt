@@ -5,3 +5,9 @@ All rights reserved. May 9, 2022.
 
 These files serve as examples and working files from in lab classes.
 
+Contents:
+Examples of each type of language covered this semester (except SQL)
+Cheatsheets for HTML5 and Emmet (VS Code Scripting)
+Examples for Labs
+HTML form examples
+
