@@ -9,18 +9,9 @@
     <title>Fun with Forms in HTML</title>
 
     <style>
-        form {
-            border: 3px green dotted;
-            border-radius: 15px;
-        }
-
-        #withborder, .lined {
-            border: 2px black solid;
-        }
-
-        #special {
-
-            background-color: blueviolet;
+        form, body { 
+            border: 3pt purple solid;
+            padding: 5px;
         }
     </style>
 
@@ -51,12 +42,11 @@
 
     <h3 class="george">front-end validation: HTML, JavaScript</h3>
 
-    <form action="" 
-        onsubmit="return validate()" method="get">
+    <form action="" onsubmit="return validate()" method="get">
 
         <p>Some text.</p>
 
-        <fieldset style="background-color: rgb(239, 74, 74);" >
+        <fieldset >
             <legend>The topmost Form!!!!</legend>
             <input type="radio" name="fredvalue">Fred rules! <br>
             <input type="text" name="theName" id="someValue">
