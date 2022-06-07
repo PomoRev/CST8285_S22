@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prof. Frank Emanuel">
+    <meta name="email" content="emanuef@algonquincollege.com">
+    <meta name="date" content="2022-06-07">
+    
+    <style>
+        /* embedded CSS */
+
+        #peter {
+
+            border: solid green 3pt;
+            background-color: aquamarine;
+            color: red;
+            padding: 3pt;
+            font-size: 14pt;
+            margin: 3pt;
+            width: 300px;
+
+            position: relative;
+            left: 20px;
+
+        }
+
+        #frankpic {
+
+            width: 200px;
+            float: right;
+        
+        }
+
+        .funbox {
+
+            border: 2pt green solid;
+
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+
+        }
+
+    </style>
+
+    <title>Flexbox</title>
+</head>
+<body>
+    <header>Flexbox</header>
+    <p>
+        Flexbox was used extensively by Bootstrap before grid.
+    </p>
+
+    <div id="peter">I am an element!</div>
+
+    <p>
+        Position was cool, but it had its limitations.
+    </p>
+
+
+    <div class="funbox clearfix">
+
+        <img id="frankpic" 
+        src="images/Frank2020scaled.jpg" 
+        alt="Picture of Frank">
+
+        <p>
+            Hey there people. I am trying to tell a story that might
+            not make any sense. But hey I'm trying. 
+        </p>
+
+    </div>
+
+    <nav>
+        <button>One</button>
+        <button>Two</button>
+        <button>Three</button>
+    </nav>
+</body>
+</html>
