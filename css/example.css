@@ -10,11 +10,25 @@
     colour of an element, I can ensure that my entire website has consistent
     colouring.  */
 
-    --pageBack: rgb(26, 17, 25);
+    --pageBack: rgb(110 54 104);
     --textBody: rgb(241, 241, 241);
     --textHeader: rgb(245, 113, 31);
+    --justRight: center;
 
 }
+
+/* mobile layout CSS */
+
+@media screen and (max-width: 500px) {
+
+    .bodytext {
+
+        color: brown;
+        font-size: 14pt;
+
+    }
+    
+ }
 
 body {
 
@@ -42,8 +56,47 @@ header {
 .bodytext {
 
     color: var(--textBody);
-    font-size: .8em;
+    font-size: 8vw;
 
 }
 
+.othertype {
+
+    background-color: var(--pageBack);
+    color: var(--textBody);
+    font-size: 12vw;
+    text-align: var(--justRight);
+
+}
+
+#outerbox {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+
+}
+
+
+#innerbox {
+
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+}
+
+.inner {
+
+    margin: 20px;
+
+}
+
+.inlineheader {
+
+    display: inline-block;
+    background-color: aquamarine;
+
+}
 
