@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prof. Frank Emanuel">
+    <meta name="email" content="emanuef@algonquincollege.com">
+    <meta name="date" content="2022-07-05">
+    <style>
+        .feedback {
+
+            color: #ff0000;
+
+        }
+    </style>
+    <script>
+        function validate() {
+
+            let errorfound = false;
+
+            if( values.value.length == 0 ) {
+
+                namefeedback.innerText = "name is required!";
+                values.style.border="red 1px solid";
+                errorfound = true;
+
+            }
+
+            return (!errorfound);
+        }
+    </script>
+    <title>Forms with Feedback</title>
+</head>
+<body>
+    <header>Forms with Feedback</header>
+    <form   action="formandDOM.html" 
+            method="get" 
+            onsubmit="return validate();">
+
+        <div class="formelement">
+            <label for="values">User Name: </label>
+            <input type="text" name="username" id="values">
+            <div class="feedback" id="namefeedback">
+
+            </div>
+        </div>
+
+        <button type="submit">Send the Data</button>
+
+    </form>
+</body>
+</html>
