@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prof. Frank Emanuel">
+    <meta name="email" content="emanuef@algonquincollege.com">
+    <meta name="date" content="2022-07-06">
+    <title>Form Feedback</title>
+    <script>
+
+        function validate() {
+
+            let result = true;
+
+            if (username.value.length == 0)
+            {   
+                // do not use required on the HTML and do not use alert()
+                // alert("you cannot leave the name field blank. Sorry.");
+
+                username.style = "background: #f33244";
+                namefeedback.innerText = "Whoah partner, I need you name.";
+                namefeedback.style = "color: #f33244";
+
+                result = false;
+            }
+
+            return result;
+
+        }
+
+        function fixcase(element) {
+
+            alert('boo!' + element.value );
+
+            element.value = element.value.toUpperCase();
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <header>Form Feedback</header>
+
+    <form action="wednesdaylab1.html" method="get" onsubmit="return validate();">
+        <div class="formelement">
+            <label for="username">Name: </label>
+            <input type="text" name="theirname" id="username" onchange="fixcase(this);">
+            <div id="namefeedback"></div>
+        </div>
+        <div class="formelement">
+            <label for="hellothere">Another field</label>
+            <input type="text" name="ted" id="hellothere">
+        </div>
+        <button type="submit">Send that Puppy In</button>
+        <button type="reset">Clear the Form</button>
+    </form>
+
+</body>
+</html>
