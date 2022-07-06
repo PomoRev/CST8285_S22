@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prof. Frank Emanuel">
+    <meta name="email" content="emanuef@algonquincollege.com">
+    <meta name="date" content="2022-07-06">
+    <title>More Form Fantastic Fun</title>
+    <script>
+        function validate(){
+
+            let returnvalue = true;
+            dlerror.innerText = "";
+
+            if ( dl.value.length == 0 ){
+
+                dl.style = "background: #ff0000ad";
+                dlerror.innerText = "I really, really, really want that number.";
+                returnvalue = false;
+
+            }
+
+            if ( another.value.length == 0 ){
+                returnvalue = false;
+            }
+
+            return returnvalue;
+
+        }
+
+        function fixcase(inputelement) {
+
+            inputelement.value = inputelement.value.toUpperCase();
+
+        }
+
+    </script>
+</head>
+<body>
+    <header>More Form Fantastic Fun</header>
+
+    <form action="lastlabwed.htm" 
+        method="get" 
+        onsubmit="return validate();">
+
+        <div class="formelement">
+            <label for="dl">Driver's License Number: </label>
+            <input type="text" name="getthisdata" id="dl" onchange="fixcase(this);">
+            <span id="dlerror"></span>
+
+        </div>
+
+        <div class="formelement">
+            <label for="odata">Your favourite novel: </label>
+            <input type="text" name="ohthisdata" id="odata" onchange="fixcase(this);">
+
+        </div>
+
+        <div class="formelement">
+            <label for="another">Driver's License Number: </label>
+            <input type="text" name="anotherdata" id="another" onchange="fixcase(this);">
+
+        </div>
+
+        <button type="submit">Give me Power</button>
+    </form>
+</body>
+</html>
