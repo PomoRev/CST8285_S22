@@ -13,6 +13,8 @@
             let returnvalue = true;
             dlerror.innerText = "";
 
+            dl.value = dl.value.toUpperCase();
+
             if ( dl.value.length == 0 ){
 
                 dl.style = "background: #ff0000ad";
@@ -21,8 +23,9 @@
 
             }
 
-            if ( another.value.length == 0 ){
+            if ( (another.value.length == 0) || (odata.value.length == 0)){
                 returnvalue = false;
+                console.log("another fired");
             }
 
             return returnvalue;
@@ -31,7 +34,7 @@
 
         function fixcase(inputelement) {
 
-            inputelement.value = inputelement.value.toUpperCase();
+            inputelement.value = inputelement.value.toLowerCase();
 
         }
 
@@ -46,7 +49,7 @@
 
         <div class="formelement">
             <label for="dl">Driver's License Number: </label>
-            <input type="text" name="getthisdata" id="dl" onchange="fixcase(this);">
+            <input type="text" name="getthisdata" id="dl">
             <span id="dlerror"></span>
 
         </div>
