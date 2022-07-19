@@ -14,19 +14,37 @@
         }
     </style>
     <script>
+        function changecase(selectortocheck) {
+
+            selectortocheck.value = selectortocheck.value.toLowerCase();
+            console.log('sent toast');
+
+        }
+
         function validate() {
 
-            let errorfound = false;
+            namefeedback.innerText = "";
+            forminput.style.border="black 1px solid";
 
-            if( values.value.length == 0 ) {
+            let formright = true;
 
-                namefeedback.innerText = "name is required!";
-                values.style.border="red 1px solid";
-                errorfound = true;
+            if( forminput.value.length < 7 ) {
+
+                namefeedback.innerText += "7 characters or more.";
+                forminput.style.border="red 1px solid";
+                formright = false;
 
             }
 
-            return (!errorfound);
+            if(forminput.value == "frank") {
+
+                namefeedback.innerText += "not the name frank.";
+                forminput.style.border="red 1px solid";
+                formright = false;
+
+            }
+
+            return (formright);
         }
     </script>
     <title>Forms with Feedback</title>
@@ -38,9 +56,16 @@
             onsubmit="return validate();">
 
         <div class="formelement">
-            <label for="values">User Name: </label>
-            <input type="text" name="username" id="values">
+            <label for="forminput">User Name: </label>
+            <input type="text" name="username" id="forminput" 
+            onchange="changecase(this);">
             <div class="feedback" id="namefeedback">
+
+            </div>
+            <label for="forminput2">User Name: </label>
+            <input type="text" name="username" id="forminput2" 
+                onchange="changecase(this);">
+            <div class="feedback" id="namefeedback2">
 
             </div>
         </div>
