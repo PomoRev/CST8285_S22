@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Prof. Frank Emanuel">
-    <meta name="email" content="emanuef@algonquincollege.com">
-    <meta name="date" content="2022-07-06">
-    <title>Sticky Elements</title>
+<?php
 
-    <style>
-        header, footer {
-            font-size: 16pt;
-            background-color: brown;
-            position: sticky;
-            width: 100%;
-        }
-        
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Sticky Situation</h1>
-        <div><a href="#hopefully">The Link</a></div>
-    </header>
-    <p class="bodytext">
+    include("boiler.html");
+
+    echo "<body>";
+
+    include("header.html");
+    
+?>
+<main>
+
+<?php 
+    if (true){
+?>
+
+<p class="bodytext">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Ratione sapiente quibusdam sequi accusamus accusantium 
         ea commodi fugiat tempore eaque illum autem ipsa nihil, 
@@ -71,6 +61,10 @@
         ea commodi fugiat tempore eaque illum autem ipsa nihil, 
         explicabo nam delectus quia placeat totam ducimus.
     </p>
+
+<?php
+    } else echo "Whoah!";
+?>
     <p class="bodytext" id="hopefully">
         Whoah Nelly! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Ratione sapiente quibusdam sequi accusamus accusantium 
@@ -113,8 +107,9 @@
         ea commodi fugiat tempore eaque illum autem ipsa nihil, 
         explicabo nam delectus quia placeat totam ducimus.
     </p>
-    <footer>
-        Hey I am a footer!
-    </footer>
-</body>
-</html>
+</main>
+
+<?php
+
+    include("footer.html");
+?>
