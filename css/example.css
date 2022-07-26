@@ -13,6 +13,7 @@
     --pageBack: rgb(110 54 104);
     --textBody: rgb(241, 241, 241);
     --textHeader: rgb(245, 113, 31);
+    --bannerBack: rgb(30, 2, 42);
     --justRight: center;
 
 }
@@ -45,9 +46,10 @@ body {
 
 }
 
-header {
+header, footer {
 
-    font-size: 1em;
+    font-size: 2vw;
+    background-color: var(--bannerBack);
     color: var(--textHeader);
     text-align: center;
 
@@ -56,7 +58,7 @@ header {
 .bodytext {
 
     color: var(--textBody);
-    font-size: 8vw;
+    font-size: 1.5vw;
 
 }
 
