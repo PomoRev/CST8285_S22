@@ -12,6 +12,8 @@ const inspiration = {
 
 function helloWorld() {
 
+
+    console.log("inside helloworld()");
     int rndQuote = (Math.random() * inspiration.quotes.length)
 
     alert(rndQuote);
