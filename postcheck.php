@@ -1,5 +1,14 @@
 <?php session_start();
 
+    $my_array = array ( 
+        array("fred", 3),
+        array("wilma", 14),
+        array( "pebbles", 1)
+    );
+
+
+
+
     if (!empty($_POST)) {
 
         if (!isset($_SESSION['itemlist'])){
@@ -43,6 +52,15 @@
         }
     }
 
+
+    echo '<select name="somestuff" id="somestuff" onchange="showme()">';
+
+    foreach ($my_array as $mini_array){
+        $blob = $mini_array[0].":".$mini_array[1];
+        echo "<option value=$blob>$mini_array[0]</option>";
+    }
+
+    echo "</select>";
 ?>
         </ol>
     </div>
@@ -55,4 +73,14 @@
     </form>
 
 </body>
+
+<script>
+    function showme(){
+
+        console.log(": " + somestuff.value);
+        item.value = somestuff.value;
+
+    }
+</script>
+
 </html>
