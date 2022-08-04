@@ -46,8 +46,7 @@
     echo '<option selected disabled>choose an option</option>';
 
     foreach ($my_array as $mini_array){
-        $blob = $mini_array[0].":".$mini_array[1];
-        echo "<option value=$blob>$mini_array[0]</option>\n";
+        echo "<option value='".$mini_array[0].":".$mini_array[1]."'>".$mini_array[0]."</option>";
     }
 
     echo "</select>";
